@@ -1,1 +1,27 @@
 node_modules
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn.lock
+package-lock.json (if you don't want to commit it, though it's often recommended to commit)
+.env (environment variables should be kept secret)
+.DS_Store (Mac OS metadata file)
+*.class
+*.log
+*.ctxt
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+target/
+bin/
+out/
+build/
+.idea/ (if using JetBrains IntelliJ IDEA)
+*.iml
+.DS_Store
+.vscode/
+/bower_components

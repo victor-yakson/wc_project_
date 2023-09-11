@@ -411,7 +411,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexpo
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   chains: () => (/* binding */ chains),\n/* harmony export */   projectId: () => (/* binding */ projectId),\n/* harmony export */   wagmiConfig: () => (/* binding */ wagmiConfig)\n/* harmony export */ });\n/* harmony import */ var _web3modal_ethereum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @web3modal/ethereum */ \"./node_modules/@web3modal/ethereum/dist/index.js\");\n/* harmony import */ var _wagmi_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wagmi/core */ \"./node_modules/@wagmi/core/dist/chunk-LAFZBYO7.js\");\n/* harmony import */ var _wagmi_core_chains__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wagmi/core/chains */ \"./node_modules/viem/dist/esm/chains/definitions/arbitrum.js\");\n/* harmony import */ var _wagmi_core_chains__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wagmi/core/chains */ \"./node_modules/viem/dist/esm/chains/definitions/mainnet.js\");\n/* harmony import */ var _wagmi_core_chains__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wagmi/core/chains */ \"./node_modules/viem/dist/esm/chains/definitions/polygon.js\");\n// Importing necessary modules\n\n\n\n\n// List of chains\nvar chains = [_wagmi_core_chains__WEBPACK_IMPORTED_MODULE_1__.arbitrum, _wagmi_core_chains__WEBPACK_IMPORTED_MODULE_2__.mainnet, _wagmi_core_chains__WEBPACK_IMPORTED_MODULE_3__.polygon];\n\n// Project ID (This would probably be supplied or replaced in actual code)\nvar projectId = '24f2453e8e1c87c5125455d0eb6506ef';\n\n// Configuring chains\nvar _configureChains = (0,_wagmi_core__WEBPACK_IMPORTED_MODULE_4__.configureChains)(chains, [(0,_web3modal_ethereum__WEBPACK_IMPORTED_MODULE_0__.w3mProvider)({\n    projectId: projectId\n  })]),\n  publicClient = _configureChains.publicClient;\n\n// Creating configuration\nvar wagmiConfig = (0,_wagmi_core__WEBPACK_IMPORTED_MODULE_4__.createConfig)({\n  autoConnect: true,\n  connectors: (0,_web3modal_ethereum__WEBPACK_IMPORTED_MODULE_0__.w3mConnectors)({\n    projectId: projectId,\n    chains: chains\n  }),\n  publicClient: publicClient\n});\n\n// Exporting configurations and utilities for use in other files\n\n\n//# sourceURL=webpack://wc_project/./src/config.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   chains: () => (/* binding */ chains),\n/* harmony export */   getWalletClient: () => (/* reexport safe */ _wagmi_core__WEBPACK_IMPORTED_MODULE_4__.getWalletClient),\n/* harmony export */   projectId: () => (/* binding */ projectId),\n/* harmony export */   wagmiConfig: () => (/* binding */ wagmiConfig)\n/* harmony export */ });\n/* harmony import */ var _web3modal_ethereum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @web3modal/ethereum */ \"./node_modules/@web3modal/ethereum/dist/index.js\");\n/* harmony import */ var _wagmi_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wagmi/core */ \"./node_modules/@wagmi/core/dist/chunk-LAFZBYO7.js\");\n/* harmony import */ var _wagmi_core_chains__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wagmi/core/chains */ \"./node_modules/viem/dist/esm/chains/definitions/arbitrum.js\");\n/* harmony import */ var _wagmi_core_chains__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wagmi/core/chains */ \"./node_modules/viem/dist/esm/chains/definitions/mainnet.js\");\n/* harmony import */ var _wagmi_core_chains__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wagmi/core/chains */ \"./node_modules/viem/dist/esm/chains/definitions/polygon.js\");\n// Importing necessary modules\n\n\n\n\n// List of chains\nvar chains = [_wagmi_core_chains__WEBPACK_IMPORTED_MODULE_1__.arbitrum, _wagmi_core_chains__WEBPACK_IMPORTED_MODULE_2__.mainnet, _wagmi_core_chains__WEBPACK_IMPORTED_MODULE_3__.polygon];\n\n// Project ID (This would probably be supplied or replaced in actual code)\nvar projectId = '24f2453e8e1c87c5125455d0eb6506ef';\n\n// Configuring chains\nvar _configureChains = (0,_wagmi_core__WEBPACK_IMPORTED_MODULE_4__.configureChains)(chains, [(0,_web3modal_ethereum__WEBPACK_IMPORTED_MODULE_0__.w3mProvider)({\n    projectId: projectId\n  })]),\n  publicClient = _configureChains.publicClient;\n\n// Creating configuration\nvar wagmiConfig = (0,_wagmi_core__WEBPACK_IMPORTED_MODULE_4__.createConfig)({\n  autoConnect: true,\n  connectors: (0,_web3modal_ethereum__WEBPACK_IMPORTED_MODULE_0__.w3mConnectors)({\n    projectId: projectId,\n    chains: chains\n  }),\n  publicClient: publicClient\n});\n\n// Exporting configurations and utilities for use in other files\n\n\n//# sourceURL=webpack://wc_project/./src/config.js?");
 
 /***/ }),
 
@@ -419,10 +419,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*!*********************!*\
   !*** ./src/main.js ***!
   \*********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _web3modal_ethereum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @web3modal/ethereum */ \"./node_modules/@web3modal/ethereum/dist/index.js\");\n/* harmony import */ var _web3modal_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @web3modal/html */ \"./node_modules/@web3modal/html/dist/index.js\");\n/* harmony import */ var _config_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./config.js */ \"./src/config.js\");\n// Importing necessary modules\n\n\n // importing from config.js\n\n// Creating an Ethereum client\nvar ethereumClient = new _web3modal_ethereum__WEBPACK_IMPORTED_MODULE_0__.EthereumClient(_config_js__WEBPACK_IMPORTED_MODULE_1__.wagmiConfig, _config_js__WEBPACK_IMPORTED_MODULE_1__.chains);\n\n// Initializing Web3Modal with the Ethereum client\nvar web3modal = new _web3modal_html__WEBPACK_IMPORTED_MODULE_2__.Web3Modal({\n  projectId: _config_js__WEBPACK_IMPORTED_MODULE_1__.projectId\n}, ethereumClient);\n\n// Add additional logic or functions here as needed\n\n//# sourceURL=webpack://wc_project/./src/main.js?");
+eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _web3modal_ethereum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @web3modal/ethereum */ \"./node_modules/@web3modal/ethereum/dist/index.js\");\n/* harmony import */ var _web3modal_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @web3modal/html */ \"./node_modules/@web3modal/html/dist/index.js\");\n/* harmony import */ var _config_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./config.js */ \"./src/config.js\");\n// Importing necessary modules\n\n\n // importing from config.js\n\n// Creating an Ethereum client\nvar ethereumClient = new _web3modal_ethereum__WEBPACK_IMPORTED_MODULE_0__.EthereumClient(_config_js__WEBPACK_IMPORTED_MODULE_1__.wagmiConfig, _config_js__WEBPACK_IMPORTED_MODULE_1__.chains);\n\n// Initializing Web3Modal with the Ethereum client\nvar web3modal = new _web3modal_html__WEBPACK_IMPORTED_MODULE_2__.Web3Modal({\n  projectId: _config_js__WEBPACK_IMPORTED_MODULE_1__.projectId\n}, ethereumClient);\n\n// Add additional logic or functions here as needed\n\nvar walletClient = await (0,_config_js__WEBPACK_IMPORTED_MODULE_1__.getWalletClient)();\nconsole.log(walletClient);\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } }, 1);\n\n//# sourceURL=webpack://wc_project/./src/main.js?");
 
 /***/ }),
 
@@ -3087,6 +3087,75 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	__webpack_require__.m = __webpack_modules__;
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/async module */
+/******/ 	(() => {
+/******/ 		var webpackQueues = typeof Symbol === "function" ? Symbol("webpack queues") : "__webpack_queues__";
+/******/ 		var webpackExports = typeof Symbol === "function" ? Symbol("webpack exports") : "__webpack_exports__";
+/******/ 		var webpackError = typeof Symbol === "function" ? Symbol("webpack error") : "__webpack_error__";
+/******/ 		var resolveQueue = (queue) => {
+/******/ 			if(queue && queue.d < 1) {
+/******/ 				queue.d = 1;
+/******/ 				queue.forEach((fn) => (fn.r--));
+/******/ 				queue.forEach((fn) => (fn.r-- ? fn.r++ : fn()));
+/******/ 			}
+/******/ 		}
+/******/ 		var wrapDeps = (deps) => (deps.map((dep) => {
+/******/ 			if(dep !== null && typeof dep === "object") {
+/******/ 				if(dep[webpackQueues]) return dep;
+/******/ 				if(dep.then) {
+/******/ 					var queue = [];
+/******/ 					queue.d = 0;
+/******/ 					dep.then((r) => {
+/******/ 						obj[webpackExports] = r;
+/******/ 						resolveQueue(queue);
+/******/ 					}, (e) => {
+/******/ 						obj[webpackError] = e;
+/******/ 						resolveQueue(queue);
+/******/ 					});
+/******/ 					var obj = {};
+/******/ 					obj[webpackQueues] = (fn) => (fn(queue));
+/******/ 					return obj;
+/******/ 				}
+/******/ 			}
+/******/ 			var ret = {};
+/******/ 			ret[webpackQueues] = x => {};
+/******/ 			ret[webpackExports] = dep;
+/******/ 			return ret;
+/******/ 		}));
+/******/ 		__webpack_require__.a = (module, body, hasAwait) => {
+/******/ 			var queue;
+/******/ 			hasAwait && ((queue = []).d = -1);
+/******/ 			var depQueues = new Set();
+/******/ 			var exports = module.exports;
+/******/ 			var currentDeps;
+/******/ 			var outerResolve;
+/******/ 			var reject;
+/******/ 			var promise = new Promise((resolve, rej) => {
+/******/ 				reject = rej;
+/******/ 				outerResolve = resolve;
+/******/ 			});
+/******/ 			promise[webpackExports] = exports;
+/******/ 			promise[webpackQueues] = (fn) => (queue && fn(queue), depQueues.forEach(fn), promise["catch"](x => {}));
+/******/ 			module.exports = promise;
+/******/ 			body((deps) => {
+/******/ 				currentDeps = wrapDeps(deps);
+/******/ 				var fn;
+/******/ 				var getResult = () => (currentDeps.map((d) => {
+/******/ 					if(d[webpackError]) throw d[webpackError];
+/******/ 					return d[webpackExports];
+/******/ 				}))
+/******/ 				var promise = new Promise((resolve) => {
+/******/ 					fn = () => (resolve(getResult));
+/******/ 					fn.r = 0;
+/******/ 					var fnQueue = (q) => (q !== queue && !depQueues.has(q) && (depQueues.add(q), q && !q.d && (fn.r++, q.push(fn))));
+/******/ 					currentDeps.map((dep) => (dep[webpackQueues](fnQueue)));
+/******/ 				});
+/******/ 				return fn.r ? promise : getResult();
+/******/ 			}, (err) => ((err ? reject(promise[webpackError] = err) : outerResolve(exports)), resolveQueue(queue)));
+/******/ 			queue && queue.d < 0 && (queue.d = 0);
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
